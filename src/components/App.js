@@ -9,10 +9,17 @@ import {VideoList} from './VideoList/VideoList';
 const App = () => {
     const [videoName,
         setVideoName] = useState('Marvel');
+    const [selectedVideo,
+        setSelectedVideo] = useState('');
+
     const [data,
         isLoading,
         isError,
         setUrl] = useFetch(`/search/?q=${videoName}`, {defaultResponse: []});
+
+    const handleVideoOnClick = (video) => {
+        setSelectedVideo(video);
+    }
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -37,10 +44,10 @@ const App = () => {
                 ? <div className="spinner"></div>
                 : <div className="row mt-5">
                     <div className="col-12 col-lg-8">
-                        <VideoDetails/>
+                        <VideoDetails selectedVideo={selectedVideo}/>
                     </div>
                     <div className="col-12 col-lg-4">
-                        <VideoList videos={data}/>
+                        <VideoList handleVideoOnClick={handleVideoOnClick} videos={data}/>
                     </div>
                 </div>
 }

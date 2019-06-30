@@ -1,14 +1,16 @@
 import React from 'react';
-import {Form} from 'react-bootstrap';
 import './SearchVideoBar.css';
+import {Form} from 'react-bootstrap';
 
-export const SearchVideoBar = () => {
+export const SearchVideoBar = ({handleFormSubmit, handleChange, videoName}) => {
     return (
-        <Form className="video-form">
+        <Form className="video-form" onSubmit={handleFormSubmit}>
             <Form.Control
                 name="video"
                 placeholder="Type a youtube video name..."
-                className="form-control video-form__input mt-4"/>
+                className="form-control video-form__input mt-4"
+                onChange={handleChange}
+                value={videoName}/>
             <button type="submit" className="video-form__btn" variant="primary">Search</button>
         </Form>
     )

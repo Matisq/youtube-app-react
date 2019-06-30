@@ -1,4 +1,5 @@
 import React from 'react';
+import './VideoItem.css';
 import {Media} from 'react-bootstrap';
 
 const VideoItem = () => {

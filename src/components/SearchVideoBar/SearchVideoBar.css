@@ -1,0 +1,32 @@
+.video-form {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+.video-form__input {
+  width: 80%;
+  padding: 25px 10px;
+}
+
+.video-form__input, .video-form__btn {
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.40);
+}
+
+.video-form__btn {
+  height: 50px;
+  margin-left: 10px;
+  width: 150px;
+  background-color: #fff;
+  border: 1px solid #D7DBDA;
+  border-radius: 3px; 
+  color: #0009;
+  padding: 10px;
+  transition: background-color, color 0.3s ease-in-out;
+}
+
+.video-form__btn:hover, .video-form__btn:focus {
+  color: #fff;
+  background-color: rgba(255, 0, 0, 0.72);
+  box-shadow: none;
+}

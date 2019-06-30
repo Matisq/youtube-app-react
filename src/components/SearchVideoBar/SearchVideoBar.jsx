@@ -1,5 +1,6 @@
 import React from 'react';
 import {Form} from 'react-bootstrap';
+import './SearchVideoBar.css';
 
 export const SearchVideoBar = () => {
     return (
